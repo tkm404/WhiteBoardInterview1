@@ -1,0 +1,48 @@
+write a func to turn a string into url
+urls cant have spaces
+replace all spaces with '%20'
+cant use regex or .replace()
+string as output
+
+
+ex:
+
+Input: "Jasmine Ann Jones"
+Output: "Jasmine%20Ann%20Jones"
+
+do this w/ and w/o recursion
+
+
+--------------------------------------
+Pseudo:
+
+input string. no trim, no split.
+loop through, find the spaces, replace with '%20'
+"for"
+
+
+
+function noSpaces(string) {
+let inputStr = `${string}`
+let outputStr = '';
+for (let i = 0; i < inputStr.length; i++) {
+if (inputStr[i] === " ") {
+outputStr = outputStr + '%20'
+} else {
+outputStr = outputStr + inputStr[i];
+}
+return outputSt
+}
+
+//
+//
+
+const recurNoSpace = (string) => {
+
+if (string === "") {
+return string)
+}
+if (string === " ") {
+return recurNoSpace(string.slice(0,-1)) + '%20'
+} else {
+return recurNoSpace(string.slice(0,-1)) + string[string.length - 1];
